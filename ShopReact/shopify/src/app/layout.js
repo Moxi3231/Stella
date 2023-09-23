@@ -1,6 +1,6 @@
 import NavBar from "./nav";
-import "bootstrap/dist/css/bootstrap.min.css";
 import ToastApp from "./toast";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export const metadata = {
   title: "Shopify",
@@ -13,15 +13,13 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/x-icon" href="icon.jpeg"></link>
       </head>
       <body>
-
         <NavBar></NavBar>
         <div className="m-5"></div>
-        <div className="container shadow-sm p-1">
+        <div className="container d-block shadow shadow-sm p-1">
           <div className="container-fluid container-lg">
             <ToastApp children={children}></ToastApp>
           </div>
         </div>
-
       </body>
     </html>
   );

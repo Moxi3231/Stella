@@ -6,10 +6,12 @@ export default function ItemCard(props) {
 
   const data = props.data;
   return (
-    <Col>
-      <Card>
-        <Image className="d-block w-100" variant="top" src={data.pimage} width={300} height={500} />
-        <Card.Body className="bg-light">
+    <Col key={data._id}>
+      <Card className="m-1 shadow shadow-sm border-0">
+        <div style={{height:300,margin:"auto",display:"block"}} >
+          <Image src={data.pimage} width={300} height="auto" style={{margin:"center"}} ></Image>
+        </div>
+        <Card.Body className="bg-light" style={{height:100,overflowY:"scroll"}} >
           <Card.Title >
             {data.title}
             <Badge className="position-absolute end-0" pill bg="secondary">${data.price}</Badge>

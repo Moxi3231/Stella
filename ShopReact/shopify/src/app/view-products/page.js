@@ -3,6 +3,7 @@
 import ItemCard from "@/components/productCard";
 import { useState, useEffect } from "react";
 import Row from "react-bootstrap/Card";
+import CardGroup from 'react-bootstrap/CardGroup';
 import Container from "react-bootstrap/Container";
 
 export default function ViewAll() {
@@ -36,11 +37,11 @@ export default function ViewAll() {
   if (fetchedData) {
     return (
       <Container>
-        <Row xs={1} md={2} className="g-4">
+        <CardGroup>
           {items.map((val) => (
             <ItemCard key={val._id} data={val}></ItemCard>
           ))}
-        </Row>
+        </CardGroup>
       </Container>
     );
   }
