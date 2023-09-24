@@ -85,3 +85,9 @@ ShopReact is a full-fledged MERN stack web app that allows you to perform CRUD o
 
 - **Insert**: You can add new items to the database by filling out the form.
 - **View**: The app displays a list of items retrieved from the MongoDB database.
+
+
+
+-------
+------
+----
