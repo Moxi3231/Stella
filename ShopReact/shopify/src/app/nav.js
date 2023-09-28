@@ -11,7 +11,7 @@ export default function NavBar() {
         <Container>
           <Nav.Item>
             <Image
-              src="./favicon.ico"
+              src="/favicon.ico"
               width={25}
               height={25}
               roundedCircle

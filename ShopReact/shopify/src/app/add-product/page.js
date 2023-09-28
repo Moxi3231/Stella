@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useContext } from "react";
-import { ToastContext } from "../toast-context";
+import { ToastContext } from "../../components/globalContext";
 import { ProductItemAddUpdate } from "@/components/productCardUpdateInsert";
 import ProductCardItemAddUpdate from "@/components/productCardUpdateInsert";
 import Product from "@/components/Product";

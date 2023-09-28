@@ -1,5 +1,5 @@
 import NavBar from "./nav";
-import ToastApp from "./toast";
+import ToastApp from "../components/toast";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const metadata = {
@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/x-icon" href="icon.jpeg"></link>
+        <link rel="icon" type="image/x-icon" href="/favicon.jpeg"></link>
       </head>
       <body>
         <NavBar></NavBar>

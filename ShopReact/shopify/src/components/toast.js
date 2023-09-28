@@ -1,6 +1,6 @@
 "use client";
 
-import { ToastContext } from "./toast-context";
+import { ToastContext } from "./globalContext";
 import {useContext,useState} from 'react';
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
@@ -19,7 +19,7 @@ export default function ToastApp({ children }) {
         <Toast onClose={() => {setData({showFlag:false})}} show={data.showFlag} delay={data.timeOut} autohide>
           <Toast.Header>
             <img
-              src="./favicon.ico"
+              src="/favicon.ico"
               className="rounded-circle me-2"
               alt=""
               width={15}

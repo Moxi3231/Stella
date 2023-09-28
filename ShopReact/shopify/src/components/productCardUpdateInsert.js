@@ -1,8 +1,7 @@
-import { createContext, useState } from "react";
+import { createContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-
-export const ProductItemAddUpdate = createContext({});
+import { ProductItemAddUpdate } from "./globalContext";
 
 export default function ProductCardItemAddUpdate(props) {
   const vars = props.vars;
