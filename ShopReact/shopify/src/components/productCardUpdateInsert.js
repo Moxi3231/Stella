@@ -1,4 +1,3 @@
-import { createContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { ProductItemAddUpdate } from "./globalContext";
@@ -28,7 +27,8 @@ export default function ProductCardItemAddUpdate(props) {
             value={product.product_title}
             placeholder="Enter Product Title"
             onChange={(event) => {
-                product.setProductTitle(event.target.value);
+              product.setProductTitle(event.target.value);
+              setSubmitFg(false);
             }}
           />
         </Form.Group>
@@ -43,6 +43,7 @@ export default function ProductCardItemAddUpdate(props) {
               placeholder="Enter Product Brand"
               onChange={(event) => {
                 product.setProductBrand(event.target.value);
+                setSubmitFg(false);
               }}
             />
           </Form.Group>
@@ -55,6 +56,7 @@ export default function ProductCardItemAddUpdate(props) {
               placeholder="Enter Product Price"
               onChange={(event) => {
                 product.setProductPrice(event.target.value);
+                setSubmitFg(false);
               }}
             />
           </Form.Group>
@@ -68,7 +70,8 @@ export default function ProductCardItemAddUpdate(props) {
             value={product.product_desciprition}
             placeholder="Enter Product Description"
             onChange={(event) => {
-                product.setProductDescription(event.target.value);
+              product.setProductDescription(event.target.value);
+              setSubmitFg(false);
             }}
           />
         </Form.Group>
@@ -79,7 +82,8 @@ export default function ProductCardItemAddUpdate(props) {
             value={product.image_url}
             placeholder="Enter Image URL"
             onChange={(event) => {
-                product.setImageUrl(event.target.value);
+              product.setImageUrl(event.target.value);
+              setSubmitFg(false);
             }}
           />
         </Form.Group>

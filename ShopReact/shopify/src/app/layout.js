@@ -14,12 +14,11 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <NavBar></NavBar>
-        <div className="m-5"></div>
-        <div className="container d-block shadow shadow-sm p-1">
-          <div className="container-fluid container-lg">
-            <ToastApp children={children}></ToastApp>
-          </div>
-        </div>
+
+
+            <ToastApp children={children}>
+            </ToastApp>
+
       </body>
     </html>
   );

@@ -2,10 +2,12 @@
 
 import ItemCard from "@/components/productCard";
 import { useState, useEffect } from "react";
-import Row from "react-bootstrap/Card";
-import CardGroup from 'react-bootstrap/CardGroup';
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import CardGroup from "react-bootstrap/CardGroup";
 import Container from "react-bootstrap/Container";
 
+import Spinner from "react-bootstrap/Spinner";
 export default function ViewAll() {
   const [fetchedData, setFetchedData] = useState(false);
   const [items, setItems] = useState([]);
@@ -25,7 +27,9 @@ export default function ViewAll() {
       const res_data = await resp.json();
       if (res_data.fetched) {
         setItems([...res_data.items]);
-        setFetchedData(true);
+        setTimeout(() => {
+          setFetchedData(true);
+        },500);
       }
     }
   };
@@ -37,18 +41,25 @@ export default function ViewAll() {
   if (fetchedData) {
     return (
       <Container>
-        <CardGroup>
+        <Row xs={1} md={2} className="g-4">
           {items.map((val) => (
             <ItemCard key={val._id} data={val}></ItemCard>
           ))}
-        </CardGroup>
+        </Row>
       </Container>
     );
   }
   return (
-    <Container className="bg-primary-subtle">
+    <Container>
       {" "}
-      <h1> Loading...</h1>
+      <Spinner
+        animation="grow"
+        className="d-block d-lg-block bg-primary-subtle center"
+        style={{ width: 300, height: 300,marginLeft:"auto",marginRight:"auto" }}
+        role="status"
+      >
+        <span className="visually-hidden">Loading...</span>
+      </Spinner>
     </Container>
   );
 }

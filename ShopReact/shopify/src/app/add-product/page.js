@@ -2,15 +2,16 @@
 
 import { useState, useContext } from "react";
 import { ToastContext } from "../../components/globalContext";
-import { ProductItemAddUpdate } from "@/components/productCardUpdateInsert";
+
 import ProductCardItemAddUpdate from "@/components/productCardUpdateInsert";
 import Product from "@/components/Product";
 
 
 export default function AddProduct() {
-  const { data, setData } = useContext(ToastContext);
+  const [ data, setData ] = useContext(ToastContext);
 
   const product = new Product();
+
   const [submitFg, setSubmitFg] = useState(false);
 
   const var_func = [
@@ -37,7 +38,7 @@ export default function AddProduct() {
     if (resp.ok) {
       const data = await resp.json();
       if (data.insertDone) {
-        product.setPData("", "", 0, "", "");
+        product.setPData("","", "", 0, "", "");
         setData({ showFlag: true, bodyData: "Insertion Done", timeOut: 3000 });
         setSubmitFg(false);
       } else {

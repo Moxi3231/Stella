@@ -23,8 +23,6 @@ export default function NavBar() {
             <Nav.Link href="/view-products">View Product</Nav.Link>
             <Nav.Link href="/search">Search Product</Nav.Link>
             <Nav.Link href="/add-product">Add Product</Nav.Link>
-            <Nav.Link href="/update-product">Update Product</Nav.Link>
-            <Nav.Link href="/delete-product">Delete Product</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
