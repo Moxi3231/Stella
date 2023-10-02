@@ -76,16 +76,17 @@ ShopReact is a full-fledged MERN stack web app that allows you to perform CRUD o
 4. Start the React app:
 
    ```shell
-   npm start
+   npm run 
    ```
 
 6. Open your browser and navigate to `http://localhost:3000` to access the ShopReact app.
-
-### ShopReact Features
+# ShopReact Features
 
 - **Insert**: You can add new items to the database by filling out the form.
 - **View**: The app displays a list of items retrieved from the MongoDB database.
-
+- **Delete**: Remove items from the database with a simple click on the delete button next to the desired item.
+- **Search**: Use the search bar to easily find specific items in the database based on keywords or phrases.
+- **Update**: Edit the details of existing items by clicking on the update button, modifying the form data, and saving the changes.
 
 
 -------

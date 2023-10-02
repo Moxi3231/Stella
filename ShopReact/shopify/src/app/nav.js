@@ -7,7 +7,12 @@ import Image from "react-bootstrap/Image";
 export default function NavBar() {
   return (
     <>
-      <Navbar bg="light" data-bs-theme="light" sticky="top" style={{zIndex:2}}>
+      <Navbar
+        bg="light"
+        data-bs-theme="light"
+        sticky="top"
+        style={{ zIndex: 2 }}
+      >
         <Container>
           <Nav.Item>
             <Image
@@ -20,9 +25,9 @@ export default function NavBar() {
           &nbsp;
           <Navbar.Brand href="/">Shopify</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/view-products">View Product</Nav.Link>
-            <Nav.Link href="/search">Search Product</Nav.Link>
             <Nav.Link href="/add-product">Add Product</Nav.Link>
+            <Nav.Link href="/search-product">Search Product</Nav.Link>
+            <Nav.Link href="/view-products">View All Products</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

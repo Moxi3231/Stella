@@ -2,6 +2,7 @@
 
 import { ToastContext } from "./globalContext";
 import { useContext, useState } from "react";
+import Container from "react-bootstrap/Container";
 import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
 
@@ -12,8 +13,12 @@ export default function ToastApp({ children }) {
     timeOut: 1000,
   });
   return (
-    <ToastContext.Provider value={[ data, setData ]}>
-      <ToastContainer  className="p-3 position-sticky top-0 start-100" style={{ zIndex: 3 }}>
+    <ToastContext.Provider value={[data, setData]}>
+      <ToastContainer
+        className="p-3 position-fixed"
+        position="top-end"
+        style={{ zIndex: 5 }}
+      >
         <Toast
           onClose={() => {
             setData({ showFlag: false });
@@ -21,6 +26,7 @@ export default function ToastApp({ children }) {
           show={data.showFlag}
           delay={data.timeOut}
           autohide
+          className="shadow-lg"
         >
           <Toast.Header>
             <img
@@ -36,7 +42,7 @@ export default function ToastApp({ children }) {
           <Toast.Body>{data.bodyData}</Toast.Body>
         </Toast>
       </ToastContainer>
-      {children}
+      <Container className="m-auto p-lg-2">{children}</Container>
     </ToastContext.Provider>
   );
 }

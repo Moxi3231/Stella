@@ -6,6 +6,7 @@ export async function queryProducts(query, filter) {
     let cp, db;
     cp = await clientPromise;
     db = cp.db("Products");
+    //await db.collection("items").createIndex({title:"text"});
     queryData = await db
       .collection("items")
       .find(query)
