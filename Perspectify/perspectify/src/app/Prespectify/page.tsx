@@ -74,7 +74,7 @@ function RenderArgs(props: { args: Array<string>, counter_args: Array<string>, i
                     <Spin size="large" style={{ fontSize: '24px' }} />
                 </Flex>
             </>}
-            {args.length > 0 && (<>
+            {args && args.length > 0 && (<>
                 <Divider orientation="left" style={{ color: '#1890FF' }}>Arguments</Divider>
                 <List
                     bordered
@@ -87,7 +87,7 @@ function RenderArgs(props: { args: Array<string>, counter_args: Array<string>, i
                 />
             </>)}
 
-            {cargs.length > 0 && (<>
+            {cargs && cargs.length > 0 && (<>
                 <Divider orientation="left" style={{ color: '#CD5C5C' }}>Counter Arguments</Divider>
                 <List
                     bordered
